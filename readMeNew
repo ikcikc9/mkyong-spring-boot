@@ -1,0 +1,10 @@
+
+$ git clone https://github.com/mkyong/spring-boot.git
+
+$ cd spring-data-jpa-mysql
+
+$ docker run –name c1 -p 3306:3306 -e MYSQL_USER=mkyong -e MYSQL_PASSWORD=password -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=mydb -d mysql:8.1
+
+$ ./mvnw clean package -Dmaven.test.skip=true
+
+$ ./mvnw spring-boot:run
